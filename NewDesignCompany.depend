@@ -1,25 +1,26 @@
 # depslib dependency file v1.0
-1773668137 source:c:\users\admin\documents\code\oop\newdesigncompany\src\basicmaterial.cpp
+1773673775 source:c:\users\admin\documents\code\oop\newdesigncompany\src\basicmaterial.cpp
 	<BasicMaterial.h>
 	<Material.h>
 	<iostream>
 
-1773668120 c:\users\admin\documents\code\oop\newdesigncompany\include\basicmaterial.h
+1773673767 c:\users\admin\documents\code\oop\newdesigncompany\include\basicmaterial.h
 	<Material.h>
 
-1773668231 c:\users\admin\documents\code\oop\newdesigncompany\include\material.h
+1773672080 c:\users\admin\documents\code\oop\newdesigncompany\include\material.h
 	<string>
 
-1772183205 source:c:\users\admin\documents\code\oop\newdesigncompany\src\material.cpp
+1773673131 source:c:\users\admin\documents\code\oop\newdesigncompany\src\material.cpp
 	<Material.h>
+	<iostream>
 
-1773668245 source:c:\users\admin\documents\code\oop\newdesigncompany\main.cpp
+1773673332 source:c:\users\admin\documents\code\oop\newdesigncompany\main.cpp
 	<iostream>
 	<Material.h>
 	<BasicMaterial.h>
 	<PaymentBill.h>
 	<FinishingMaterial.h>
-	<StructuralMaterial.h>
+	<iomanip>
 
 1773668162 source:c:\users\admin\documents\code\oop\newdesigncompany\src\structuralmaterial.cpp
 	"StructuralMaterial.h"
@@ -28,26 +29,28 @@
 1773668120 c:\users\admin\documents\code\oop\newdesigncompany\include\structuralmaterial.h
 	<Material.h>
 
-1773668149 source:c:\users\admin\documents\code\oop\newdesigncompany\src\finishingmaterial.cpp
+1773673755 source:c:\users\admin\documents\code\oop\newdesigncompany\src\finishingmaterial.cpp
 	"FinishingMaterial.h"
 	<iostream>
 
-1773668120 c:\users\admin\documents\code\oop\newdesigncompany\include\finishingmaterial.h
+1773673746 c:\users\admin\documents\code\oop\newdesigncompany\include\finishingmaterial.h
 	<Material.h>
 
-1773666394 source:c:\users\admin\documents\code\oop\newdesigncompany\src\worker.cpp
+1773673719 source:c:\users\admin\documents\code\oop\newdesigncompany\src\worker.cpp
 	"Worker.h"
+	<iostream>
 
-1773666408 c:\users\admin\documents\code\oop\newdesigncompany\include\worker.h
+1773673712 c:\users\admin\documents\code\oop\newdesigncompany\include\worker.h
 	<string>
 
-1773666463 c:\users\admin\documents\code\oop\newdesigncompany\include\paymentbill.h
+1773673695 c:\users\admin\documents\code\oop\newdesigncompany\include\paymentbill.h
 	<Worker.h>
 	<Material.h>
 	<vector>
 	<string>
 
-1773668366 source:c:\users\admin\documents\code\oop\newdesigncompany\src\paymentbill.cpp
+1773673701 source:c:\users\admin\documents\code\oop\newdesigncompany\src\paymentbill.cpp
 	"PaymentBill.h"
 	<iostream>
+	<string>
 

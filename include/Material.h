@@ -17,14 +17,14 @@ class Material
 {
 private:
 protected:
-    MaterialType type = MaterialType::BASIC;
+    MaterialType type;
     Unit unit;
-    int count = 0;
-    float price = 0;
+    int count;
+    float price;
 
 public:
 
-    Material();
+    Material(int cnt = 0, float price = 0);
     virtual ~Material();
 
     std::string getType()
@@ -33,32 +33,12 @@ public:
     }
 
     Unit getUnit() {return unit;}
-    Unit setUnit(Unit unit) {return this->unit = unit;}
-
     int getCount() {return count;}
-    int setCount(int count)
-    {
-        if(count < 0)
-        {
-            count = 0;
-        }
-
-        return this->count = count;
-    }
-
     float getPrice() {return price;}
-    float setPrice(float price)
-    {
-        if(price < 0)
-        {
-            price = 0;
-        }
 
-        return this->price = price;
-    }
+    virtual void printExtraFee ();
 
-    virtual void printExtraFee() = 0;
-
-    virtual inline double totalAmount () = 0;
+    virtual double totalAmount ();
+    virtual void print();
 };
 #endif // MATERIAL_H

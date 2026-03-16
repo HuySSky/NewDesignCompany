@@ -3,28 +3,17 @@
 #include <BasicMaterial.h>
 #include <PaymentBill.h>
 #include <FinishingMaterial.h>
-#include <StructuralMaterial.h>
 #include <iomanip>
 
 using namespace std;
 
 PaymentBill bill;
 
-Worker* createWorker(string name, float work, float dongia)
-{
-    Worker *worker = new Worker();
-    worker->setName(name);
-    worker->setWork(work);
-    worker->setDonGia(dongia);
-
-    return worker;
-}
-
 void addWorker()
 {
-    auto worker1 = createWorker("An", 10, 10);
-    auto worker2 = createWorker("Binh", 25, 100);
-    auto worker3 = createWorker("Hung", 100, 150);
+    auto *worker1 = new Worker {"An", 10, 10};
+    auto worker2 = new Worker {"Binh", 25, 100};
+    auto worker3 = new Worker {"Hung", 100, 150};
 
     bill.addWorker(worker1);
     bill.addWorker(worker2);
@@ -35,20 +24,9 @@ void addWorker()
 
 void addMaterial()
 {
-    BasicMaterial *basic = new BasicMaterial();
-    FinishingMaterial *finish = new FinishingMaterial();
-    StructuralMaterial *structural = new StructuralMaterial();
-
-    basic->setCount(10);
-    basic->setPrice(10000);
-    basic->setTransportFeePct(10);
-
-    structural->setCount(5);
-    structural->setPrice(15000);
-
-    finish->setCount(20);
-    finish->setPrice(20000);
-    finish->setPackagingFee(30000);
+    auto *basic = new BasicMaterial {10, 10000, 10};
+    auto *finish = new FinishingMaterial {20, 20000, 30000};
+    auto *structural = new Material {5, 15000};
 
     bill.addMaterial(basic);
     bill.addMaterial(structural);

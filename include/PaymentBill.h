@@ -19,17 +19,13 @@ protected:
 
 public:
 
-    PaymentBill();
+    PaymentBill(std::string ID = "1", std::string date = "01/01/0001");
     virtual ~PaymentBill();
 
     std::string getID() { return ID; }
-    std::string setID(std::string val) {return ID = val; }
-
     std::string getDate() { return date; }
-    std::string setDate(std::string val) {return date = val; }
 
     double getTotalAmount() { return totalAmount; }
-    void calTotalAmount(double val);
 
     void addWorker(Worker *worker);
     void addMaterial(Material *material);

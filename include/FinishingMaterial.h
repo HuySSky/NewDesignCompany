@@ -11,18 +11,9 @@ protected:
 
 public:
 
-    FinishingMaterial();
+    FinishingMaterial(int cnt = 0, float price = 0, float packagingFee = 0);
     virtual ~FinishingMaterial();
 
-    void setPackagingFee(float val)
-    {
-        if(val < 0)
-        {
-            val = 0;
-        }
-
-        packagingFee = val;
-    }
     float getPackagingFee() {return packagingFee;}
 
     void printExtraFee() override;

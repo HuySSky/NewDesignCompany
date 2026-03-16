@@ -1,15 +1,24 @@
 #include "PaymentBill.h"
 #include <iostream>
+#include <string>
 
-
-PaymentBill::PaymentBill()
+PaymentBill::PaymentBill(std::string ID, std::string date)
 {
-    //ctor
+    this->ID = ID;
+    this->date = date;
 }
 
 PaymentBill::~PaymentBill()
 {
-    //dtor
+    for(auto& fe: workers)
+    {
+        delete fe;
+    }
+
+    for(auto& fe: materials)
+    {
+        delete fe;
+    }
 }
 
 void PaymentBill::addWorker(Worker *worker)
@@ -29,12 +38,7 @@ void PaymentBill::printWorker()
     std::cout << "WORKER LIST: \n";
     for(auto &fe: workers)
     {
-        std::cout << "---------------\n";
-        std::cout << "Name: " << fe->getName() << '\n';
-        std::cout << "Number of works: " << fe->getWork() << '\n';
-        std::cout << "Don gia: " << fe->getDonGia() << '\n';
-        std::cout << "Thu nhap: " << fe->getIncome() << '\n';
-        std::cout << "---------------\n";
+        fe->print();
     }
 }
 
@@ -43,13 +47,7 @@ void PaymentBill::printMaterial()
     std::cout << "MATERIAL LIST: \n";
     for(auto &fe: materials)
     {
-        std::cout << "---------------\n";
-        std::cout << fe->getType() << '\n';
-        std::cout << "Quantity: " << fe->getCount() << '\n';
-        std::cout << "Price: " << fe->getPrice() << '\n';
-        std::cout << "Total amount: " <<fe->totalAmount() << '\n';
-        fe->printExtraFee(); std::cout << '\n';
-        std::cout << "---------------\n";
+        fe->print();
     }
 }
 

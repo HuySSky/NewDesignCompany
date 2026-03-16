@@ -1,9 +1,11 @@
 #include "FinishingMaterial.h"
 #include <iostream>
 
-FinishingMaterial::FinishingMaterial()
+FinishingMaterial::FinishingMaterial(int cnt, float price, float packagingFee): Material(cnt, price)
 {
     type = MaterialType::FINISHING;
+
+    this->packagingFee = packagingFee;
 }
 
 FinishingMaterial::~FinishingMaterial()
@@ -11,7 +13,7 @@ FinishingMaterial::~FinishingMaterial()
     //dtor
 }
 
-inline double FinishingMaterial::totalAmount()
+double FinishingMaterial::totalAmount()
 {
     return count*price + packagingFee;
 }

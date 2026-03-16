@@ -2,9 +2,11 @@
 #include <Material.h>
 #include <iostream>
 
-BasicMaterial::BasicMaterial()
+BasicMaterial::BasicMaterial(int cnt, float price, float transportFeePct): Material(cnt, price)
 {
     type = MaterialType::BASIC;
+
+    this->transportFeePct = transportFeePct;
 }
 
 BasicMaterial::~BasicMaterial()
@@ -12,7 +14,7 @@ BasicMaterial::~BasicMaterial()
 
 }
 
-inline double BasicMaterial::totalAmount()
+double BasicMaterial::totalAmount()
 {
     return count*price*(1 + transportFeePct/100);
 }

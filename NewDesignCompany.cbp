@@ -38,14 +38,12 @@
 		<Unit filename="include/FinishingMaterial.h" />
 		<Unit filename="include/Material.h" />
 		<Unit filename="include/PaymentBill.h" />
-		<Unit filename="include/StructuralMaterial.h" />
 		<Unit filename="include/Worker.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/BasicMaterial.cpp" />
 		<Unit filename="src/FinishingMaterial.cpp" />
 		<Unit filename="src/Material.cpp" />
 		<Unit filename="src/PaymentBill.cpp" />
-		<Unit filename="src/StructuralMaterial.cpp" />
 		<Unit filename="src/Worker.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

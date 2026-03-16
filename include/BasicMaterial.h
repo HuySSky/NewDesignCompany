@@ -6,16 +6,15 @@
 class BasicMaterial: public Material
 {
 private:
-    float transportFeePct = 0;
+    float transportFeePct;
 
 protected:
 public:
 
-    BasicMaterial();
+    BasicMaterial(int cnt = 0, float price = 0, float transportFeePct = 0);
     virtual ~BasicMaterial();
 
     float getTransportFeePct() {return transportFeePct;}
-    float setTransportFeePct(float transportFeePct) {return this->transportFeePct = transportFeePct;}
 
     void printExtraFee() override;
     inline double totalAmount();
